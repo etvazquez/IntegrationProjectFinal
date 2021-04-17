@@ -1,0 +1,197 @@
+"""This is my Integration Project, highlighting what I have learned
+    throughout the course."""
+
+
+def main():
+    """
+This is my main function which hold all of the code for my project.
+    """
+    # Ethan Vazquez
+    # Integration Project: A Summary of What I've Learned
+    # A greeting to the user
+    name = input("What is your name?")
+    # The above line stores the variable "name" as whatever the user enters
+    # when the program asks
+    print("Welcome to my integration project", name)
+    print("The first part of this program is a calculator that will", end=' ')
+    print("allow the user to do basic mathematical functions using", end=' ')
+    print("operators and defined variables.")
+    # Basic Math Functions: A calculator
+    first_number = input("Enter a number:")
+    second_number = input("Enter another number:")
+    # The above lines make it so that the variables are stored as whatever the
+    # user enters their values as
+    try:
+        num1 = float(first_number)
+        num2 = float(second_number)
+        # The above lines make it so that the inputs from the user are stored
+        # as integers for operations done by the program
+        # Simple Addition
+        # Simple addition uses the + operator
+        summation = num1 + num2
+        print("Sum =", summation)
+        # The above line sets the variable "sum" as the result of the indicated
+        # operation done with the users chosen numbers
+        # Simple Subtraction
+        # Simple subtraction uses the - operator
+        difference = num1 - num2
+        # The above line sets the variable "difference" as the result of the
+        # indicated operation done with the users chosen numbers
+        print("Difference =", difference)
+        # Simple Multiplication
+        # Simple multiplication uses the * operator
+        product = num1 * num2
+        # The above line sets the variable "product" as the result of the
+        # indicated operation done with the users chosen numbers
+        print("Product =", product)
+        # Simple Division
+        # Simple division uses the / operator
+        quotient = num1 / num2
+        # The above line sets the variable "quotient" as the result of the
+        # indicated operation done with the users chosen numbers
+        print("Quotient =", quotient)
+        # Floor Division
+        # Floor division uses the // operator, and rounds the quotient to the
+        # nearest whole number
+        rounded_quotient = num1 // num2
+        # The above line sets the variable "rounded_quotient" as the result of
+        # the indicated operation done with the users chosen numbers
+        print("Rounded quotient =", rounded_quotient)
+        # Exponents
+        # Exponents are done by using the ** operator
+        exponential = num1 ** num2
+        # The above line sets the variable "exponential" as the result of the
+        # indicated operation done with the users chosen numbers
+        print("Exponential =", exponential)
+        # Modulus
+        # Modulus uses the % operator, and finds the remainder of a division
+        # problem
+        remainder = num1 % num2
+        # The above line sets the variable "remainder" as the result of the
+        # indicated operation done with the users chosen numbers
+        print("Remainder =", remainder)
+    except ValueError:
+        print("Error. Please re-run the code and enter numbers.")
+
+    # A Showcase of String Operators
+    print("The next lines show how string operators work in Python!")
+    string1 = "Hello "
+    string2 = name
+    # The + operator concatenates strings together, basically chaining them
+    # together
+    print(string1 + string2)
+    # The * operator allows a string to be repeated any number of times
+    number_strings_repeated = input(
+        "How many times would you like to repeat the string?")
+    try:
+        number_of_strings = int(number_strings_repeated)
+        print(string1 * number_of_strings)
+    except ValueError:
+        print("Error. Please re-run code and enter a whole number.")
+
+    # Calculator For Price of An Order
+    # This blends some of the skills from the previous demonstrations
+    print(
+        "The total cost of a purchasing order can be found using the next"
+        " lines!")
+    number_of_orders = input("How many orders would you like to make?")
+    cost_of_item = input("How much does each item cost?")
+    try:
+        num_orders = float(number_of_orders)
+        item_cost = float(cost_of_item)
+        total_cost = num_orders * item_cost
+        print("Total cost of your order: $", format(total_cost, '0.2f'),
+              sep='')
+    except ValueError:
+        print("Error. Please re-run code and enter numbers.")
+    # The above line uses format(total_cost,'0.2f') to add a hundredth place
+    # to the total cost of the order
+    # Additionally, it uses sep='' to remove the space between the $ and the
+    # total cost when the program is run
+
+    # This is the start of sprint 2
+    # A Showcase of a for Loop
+    # This section of code adds together 5 numbers and sets the variable total
+    # equal to their sum
+    try:
+        total_sum = 0
+        for x in range(5):
+            number = float(input("Enter a number: "))
+            total_sum += number
+            print("The total is:", total_sum)
+    except ValueError:
+        print("Error. Please re-run code and enter a number.")
+
+    # A Showcase of a while Loop
+    # This section of code prints the name that was defined by the variable at
+    # the beginning of the code and while x is less than 10
+    print(
+        "The following lines are a showcase of how a while loop will continue"
+        " to run until its condition is no "
+        "longer satisfied")
+    x = 0
+    while x < 10:
+        # Here the while loop will continue to print out the name until x is
+        # equal to 10
+        print(name)
+        x += 1
+        # The above line increases the value of x by 1, each time the code is
+        # run
+
+    # A Showcase of if-else Statements
+    print("The following lines of code show what an if-else statement can do.")
+    try:
+        if_else_number = float(input("Enter a number:"))
+        z = 1
+        while z <= if_else_number:
+            if z % 10 == 0:
+                # This will continue to print the value of z if the remainder
+                # of z divided by 10 is equal to 0
+                print(z)
+            else:
+                # If the "if" condition is not true, then this will print
+                # the value z and add 1 to it
+                print(z, end=" ")
+                z += 1
+    except ValueError:
+        print("Error. Please re-run code and enter a number less than or "
+              "equal to 10.")
+    # A Showcase of Boolean Operators
+    # Graduation Helper - Using the "and" operator
+    print(
+        "The following lines of code are to help students see if they have met"
+        " their graduation requirements.")
+    try:
+        num_credits = float(input("Enter number of credits:"))
+        major_gpa = float(input("Enter GPA for the major:"))
+        overall_gpa = float(input("Enter overall GPA:"))
+        if num_credits >= 120 and major_gpa >= 2.0 and overall_gpa >= 2.0:
+            # The above line of code shows that all of the conditions must be
+            # met for the lower message to appear
+            print("Congratulations!")
+            print("You seem to meet all the criteria for graduation.")
+        else:
+            # The "else" part of this section of code will print if any of the
+            # conditions from the if statement are not satisfied
+            print("Sorry")
+            print("You do not meet all the criteria for graduation.")
+            print("Done!")
+            # The above line prints "Done!", so the user knows when this
+            # portion of the code is completed.
+    except ValueError:
+        print("Error. Please re-run code and enter numbers.")
+
+    # A Showcase of Boolean Operators
+    # The following code is a demonstration of the "or" and "not" Boolean
+    # Operators
+    try:
+        a = float(input("Enter a value to see if it is divisible by 3 or 5:"))
+        if not (a % 3 == 0 or a % 5 == 0):
+            print(a, "is not divisible by either 3 or 5")
+        else:
+            print(a, "is divisible by either 3 or 5")
+    except ValueError:
+        print("Error. Please enter a number and re-run the code")
+
+
+main()
